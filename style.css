@@ -43,6 +43,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .text-accent { color: var(--accent-gold) !important; }
+.text-muted { color: #c5ced0 !important; }
 .bg-darker { background-color: var(--bg-darker); }
 .fs-7 { font-size: 0.85rem; }
 .extra-small { font-size: 0.75rem; }
@@ -516,12 +517,25 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 12px;
 }
 
+.learning-box .text-muted {
+    color: #c5ced0 !important;
+}
+
 .github-card { padding: 2rem; }
 
 .contact-card {
     padding: 1.5rem;
     text-align: center;
     height: 100%;
+}
+
+#contact .text-muted {
+    color: #c5ced0 !important;
+}
+
+#contact .contact-card p {
+    font-size: 0.9rem;
+    overflow-wrap: anywhere;
 }
 
 .contact-icon {
@@ -549,6 +563,11 @@ h1, h2, h3, h4, h5, h6 {
     border-color: var(--accent-cyan);
     color: var(--text-white);
     box-shadow: 0 0 0 3px rgba(120, 214, 208, 0.1);
+}
+
+.form-control::placeholder {
+    color: #aeb9bc;
+    opacity: 1;
 }
 
 .invalid-feedback { font-size: 0.75rem; }
