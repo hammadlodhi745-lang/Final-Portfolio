@@ -107,27 +107,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
     setDefaultHomeState();
 
-    bootstrap.ScrollSpy.getOrCreateInstance(document.body, {
-        target: "#mainNavbar",
-        offset: 100
-    });
-
     const sections = document.querySelectorAll("main section[id], body > section[id]");
 
     const sectionObserver = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-            if (!entry.isIntersecting) return;
-
-            if (window.scrollY < 80) {
-                setDefaultHomeState();
-                return;
-            }
-
-            setActiveNavLink(entry.target.id);
+        const visibleEntries = entries.filter(function (entry) {
+            return entry.isIntersecting;
         });
+
+        if (!visibleEntries.length) return;
+
+        if (window.scrollY < 80) {
+            setDefaultHomeState();
+            return;
+        }
+
+        const topVisibleSection = visibleEntries.sort(function (a, b) {
+            return a.boundingClientRect.top - b.boundingClientRect.top;
+        })[0];
+
+        setActiveNavLink(topVisibleSection.target.id);
     }, {
-        rootMargin: "-32% 0px -58% 0px",
-        threshold: 0
+        rootMargin: "-20% 0px -60% 0px",
+        threshold: 0.1
     });
 
     sections.forEach(function (section) {
@@ -141,6 +142,7 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
             navbar.classList.remove("shadow-lg");
             navbar.style.padding = "1rem 0";
+            setDefaultHomeState();
         }
     });
 
