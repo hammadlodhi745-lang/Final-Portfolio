@@ -24,6 +24,34 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
+
+    const revealTargets = document.querySelectorAll("section[id], .about-image-wrapper, .about-content, .skill-card, .service-card, .contact-card, .placeholder-card, .experience-card, .github-card, .form-container");
+    revealTargets.forEach(function (element, index) {
+        element.classList.add("reveal");
+        if (index % 3 === 0) {
+            element.classList.add("reveal-delay-1");
+        } else if (index % 3 === 1) {
+            element.classList.add("reveal-delay-2");
+        } else {
+            element.classList.add("reveal-delay-3");
+        }
+    });
+
+    const revealObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.12,
+        rootMargin: "0px 0px -8% 0px"
+    });
+
+    revealTargets.forEach(function (element) {
+        revealObserver.observe(element);
+    });
     
     const typedTextSpan = document.getElementById("typed-text");
     const phrases = PORTFOLIO_DATA.typingPhrases;
@@ -65,23 +93,37 @@ document.addEventListener("DOMContentLoaded", function () {
     const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
     const navbarCollapse = document.getElementById("navbarContent");
 
-    bootstrap.ScrollSpy.getOrCreateInstance(document.body, {
-        target: "#mainNavbar",
-        offset: 100
-    });
-
-    const sections = document.querySelectorAll("main section[id], body > section[id]");
     const setActiveNavLink = function (sectionId) {
         navLinks.forEach(function (navLink) {
             navLink.classList.toggle("active", navLink.getAttribute("href") === `#${sectionId}`);
         });
     };
 
+    const setDefaultHomeState = function () {
+        navLinks.forEach(function (navLink) {
+            navLink.classList.toggle("active", navLink.getAttribute("href") === "#home");
+        });
+    };
+
+    setDefaultHomeState();
+
+    bootstrap.ScrollSpy.getOrCreateInstance(document.body, {
+        target: "#mainNavbar",
+        offset: 100
+    });
+
+    const sections = document.querySelectorAll("main section[id], body > section[id]");
+
     const sectionObserver = new IntersectionObserver(function (entries) {
         entries.forEach(function (entry) {
-            if (entry.isIntersecting) {
-                setActiveNavLink(entry.target.id);
+            if (!entry.isIntersecting) return;
+
+            if (window.scrollY < 80) {
+                setDefaultHomeState();
+                return;
             }
+
+            setActiveNavLink(entry.target.id);
         });
     }, {
         rootMargin: "-32% 0px -58% 0px",
