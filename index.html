@@ -40,14 +40,17 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="scroll-progress" aria-hidden="true">
+        <div class="scroll-progress-bar"></div>
+    </div>
 
     <nav class="navbar navbar-expand-lg fixed-top navbar-dark" id="mainNavbar">
         <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="#home">
+            <a class="navbar-brand d-flex align-items-center" href="#home" aria-label="Muhammad Hammad home">
                 <span class="logo-box">MH</span>
-                <span class="logo-text ms-2">Muhammad Hammad</span>
+                <span class="logo-text ms-2">MUHAMMAD HAMMAD</span>
             </a>
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler border-0" type="button" aria-expanded="false" aria-controls="navbarContent" aria-label="Toggle navigation">
                 <i data-lucide="menu" class="nav-menu-icon text-accent"></i>
                 <i data-lucide="x" class="nav-close-icon text-accent"></i>
             </button>
@@ -77,12 +80,12 @@
                         <span class="badge-custom mb-3">
                             <i data-lucide="code-2" class="hero-badge-icon me-2"></i>FRONTEND DEVELOPER
                         </span>
-                        <h1 class="hero-title mb-2">Hi, I'm <span class="text-gradient">Muhammad Hammad.</span></h1>
+                        <h1 class="hero-title mb-3">MUHAMMAD <span class="text-gradient">HAMMAD</span></h1>
                         <h2 class="hero-subtitle mb-4">
-                            Building <span id="typed-text"></span><span class="cursor">&nbsp;</span>
+                            Building <span class="text-gradient" id="typed-text"></span><span class="cursor">&nbsp;</span>
                         </h2>
-                        <p class="hero-description text-muted mb-4">
-                            I create clean, responsive and interactive websites using modern frontend technologies, with a focus on great user experience and professional design.
+                        <p class="hero-description mb-4">
+                            Building Modern, Responsive & Interactive Web Experiences.
                         </p>
                         
                         <div class="d-flex flex-wrap gap-3 mb-4">
@@ -103,7 +106,9 @@
                     </div>
                 </div>
                 <div class="col-lg-5 text-center">
-                    <div class="hero-visual">
+                    <div class="hero-visual" aria-hidden="true">
+                        <div class="orb orb-one"></div>
+                        <div class="orb orb-two"></div>
                         <div class="visual-card">
                             <div class="visual-header">
                                 <span class="dot red"></span>
@@ -112,12 +117,12 @@
                                 <span class="visual-title">developer.js</span>
                             </div>
                             <div class="visual-body text-start font-monospace">
-                                <p class="mb-1"><span class="text-gold">const</span> <span class="text-white">developer</span> = {</p>
-                                <p class="mb-1 ms-3"><span class="text-muted">name:</span> <span class="text-success">'Muhammad Hammad'</span>,</p>
-                                <p class="mb-1 ms-3"><span class="text-muted">role:</span> <span class="text-success">'Frontend Developer'</span>,</p>
-                                <p class="mb-1 ms-3"><span class="text-muted">focus:</span> [<span class="text-success">'Responsive UI'</span>, <span class="text-success">'Modern Design'</span>],</p>
-                                <p class="mb-1 ms-3"><span class="text-muted">coreSkills:</span> [<span class="text-warning">'HTML5'</span>, <span class="text-warning">'CSS3'</span>, <span class="text-warning">'JavaScript'</span>, <span class="text-warning">'Bootstrap 5'</span>],</p>
-                                <p class="mb-1 ms-3"><span class="text-muted">openToWork:</span> <span class="text-info">true</span></p>
+                                <p class="mb-1"><span class="token-keyword">const</span> <span class="text-white">developer</span> = {</p>
+                                <p class="mb-1 ms-3"><span class="token-muted">name:</span> <span class="token-string">'Muhammad Hammad'</span>,</p>
+                                <p class="mb-1 ms-3"><span class="token-muted">role:</span> <span class="token-string">'Frontend Developer'</span>,</p>
+                                <p class="mb-1 ms-3"><span class="token-muted">focus:</span> [<span class="token-string">'Responsive UI'</span>, <span class="token-string">'Modern Design'</span>],</p>
+                                <p class="mb-1 ms-3"><span class="token-muted">coreSkills:</span> [<span class="token-string">'HTML5'</span>, <span class="token-string">'CSS3'</span>, <span class="token-string">'JavaScript'</span>, <span class="token-string">'Bootstrap 5'</span>],</p>
+                                <p class="mb-1 ms-3"><span class="token-muted">openToWork:</span> <span class="token-boolean">true</span></p>
                                 <p class="mb-0">};</p>
                             </div>
                         </div>
@@ -130,7 +135,7 @@
     <section id="about" class="py-6 bg-darker">
         <div class="container">
             <div class="text-center mb-5">
-                <span class="text-accent text-uppercase tracking-wider fw-bold fs-7">Get To Know Me</span>
+                <span class="text-accent text-uppercase tracking-wider fw-bold fs-7">01 — ABOUT ME</span>
                 <h2 class="section-title">About Me</h2>
                 <div class="title-line mx-auto"></div>
             </div>
@@ -554,8 +559,8 @@
     <section id="contact" class="py-6 bg-darker">
         <div class="container">
             <div class="text-center mb-5">
-                <span class="text-accent text-uppercase tracking-wider fw-bold fs-7">Get In Touch</span>
-                <h2 class="section-title">Let's Build Something Together</h2>
+                <span class="text-accent text-uppercase tracking-wider fw-bold fs-7">GET IN TOUCH</span>
+                <h2 class="section-title">LET'S BUILD SOMETHING GREAT.</h2>
                 <div class="title-line mx-auto"></div>
                 <p class="text-muted mt-3 max-w-600 mx-auto">
                     Have a website idea or need a modern frontend for your business? Let's turn your idea into a responsive and engaging web experience.
@@ -632,19 +637,15 @@
 
     </main>
 
-    <footer class="footer py-4 border-top border-secondary border-opacity-10">
+    <footer class="footer py-4">
         <div class="container">
-            <div class="row align-items-center gy-3 text-center text-md-start">
-                <div class="col-md-6">
-                    <p class="text-muted small mb-0">&copy; 2026 Muhammad Hammad. All Rights Reserved.</p>
+            <div class="footer-bottom">
+                <div class="footer-socials justify-content-center mb-3">
+                    <a href="https://github.com/hammadlodhi745-lang/Cars-Web" target="_blank" class="text-muted" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="mailto:hammadlodhi745@gmail.com" class="text-muted" aria-label="Email"><i data-lucide="mail"></i></a>
+                    <a href="https://wa.me/923142476885" target="_blank" class="text-muted" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
                 </div>
-                <div class="col-md-6 text-center text-md-end">
-                    <div class="footer-socials">
-                        <a href="https://github.com/hammadlodhi745-lang/Cars-Web" target="_blank" class="text-muted me-3"><i class="fa-brands fa-github"></i></a>
-                        <a href="mailto:hammadlodhi745@gmail.com" class="text-muted me-3"><i data-lucide="mail"></i></a>
-                        <a href="https://wa.me/923142476885" target="_blank" class="text-muted"><i class="fa-brands fa-whatsapp"></i></a>
-                    </div>
-                </div>
+                <p class="text-muted small mb-0">&copy; 2026 All Rights Reserved.</p>
             </div>
         </div>
     </footer>

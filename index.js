@@ -92,6 +92,28 @@ document.addEventListener("DOMContentLoaded", function () {
     const navbar = document.getElementById("mainNavbar");
     const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
     const navbarCollapse = document.getElementById("navbarContent");
+    const navToggle = document.querySelector(".navbar-toggler");
+    const progressBar = document.querySelector(".scroll-progress-bar");
+
+    const setMobileMenuState = function (isOpen) {
+        if (!navbarCollapse || !navToggle) return;
+
+        navbarCollapse.classList.toggle("show", isOpen);
+        navToggle.setAttribute("aria-expanded", String(isOpen));
+        navToggle.classList.toggle("collapsed", !isOpen);
+    };
+
+    if (navToggle && navbarCollapse) {
+        navToggle.addEventListener("click", function () {
+            const isOpen = navToggle.getAttribute("aria-expanded") === "true";
+            setMobileMenuState(!isOpen);
+        });
+    }
+
+    const setScrollState = function () {
+        const scrolled = window.scrollY > 20;
+        navbar.classList.toggle("scrolled", scrolled);
+    };
 
     const setActiveNavLink = function (sectionId) {
         navLinks.forEach(function (navLink) {
@@ -109,53 +131,85 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const sections = document.querySelectorAll("main section[id], body > section[id]");
 
-    const sectionObserver = new IntersectionObserver(function (entries) {
-        const visibleEntries = entries.filter(function (entry) {
-            return entry.isIntersecting;
-        });
-
-        if (!visibleEntries.length) return;
-
+    const updateActiveSectionFromScroll = function () {
         if (window.scrollY < 80) {
             setDefaultHomeState();
             return;
         }
 
-        const topVisibleSection = visibleEntries.sort(function (a, b) {
-            return a.boundingClientRect.top - b.boundingClientRect.top;
-        })[0];
+        let activeSection = null;
+        let smallestDistance = Number.POSITIVE_INFINITY;
 
-        setActiveNavLink(topVisibleSection.target.id);
-    }, {
-        rootMargin: "-20% 0px -60% 0px",
-        threshold: 0.1
-    });
+        sections.forEach(function (section) {
+            const rect = section.getBoundingClientRect();
+            const distance = Math.abs(rect.top - 120);
 
-    sections.forEach(function (section) {
-        sectionObserver.observe(section);
-    });
-    
+            if (rect.top <= 180 && rect.bottom > 140) {
+                if (distance < smallestDistance) {
+                    smallestDistance = distance;
+                    activeSection = section;
+                }
+            }
+        });
+
+        if (activeSection) {
+            setActiveNavLink(activeSection.id);
+        }
+    };
+
+    const updateScrollProgress = function () {
+        const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = totalHeight > 0 ? (window.scrollY / totalHeight) * 100 : 0;
+        if (progressBar) {
+            progressBar.style.width = progress + "%";
+        }
+    };
+
+    setScrollState();
+    updateScrollProgress();
+    updateActiveSectionFromScroll();
+
     window.addEventListener("scroll", function () {
-        if (window.scrollY > 50) {
-            navbar.classList.add("shadow-lg");
-            navbar.style.padding = "0.6rem 0";
-        } else {
-            navbar.classList.remove("shadow-lg");
-            navbar.style.padding = "1rem 0";
+        setScrollState();
+        updateScrollProgress();
+        updateActiveSectionFromScroll();
+
+        if (window.scrollY <= 50) {
             setDefaultHomeState();
         }
     });
 
     navLinks.forEach(function (link) {
-        link.addEventListener("click", function () {
+        link.addEventListener("click", function (event) {
+            const href = link.getAttribute("href");
+            const sectionId = href && href.startsWith("#") ? href.slice(1) : "";
+
+            if (sectionId) {
+                const section = document.getElementById(sectionId);
+                if (section) {
+                    event.preventDefault();
+
+                    const offset = navbar ? navbar.offsetHeight + 26 : 0;
+                    const targetPosition = Math.max(section.offsetTop - offset, 0);
+
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: "smooth"
+                    });
+
+                    setTimeout(function () {
+                        setActiveNavLink(sectionId);
+                    }, 120);
+                }
+            }
+
             navLinks.forEach(function (navLink) {
                 navLink.classList.remove("active");
             });
             link.classList.add("active");
 
-            if (navbarCollapse.classList.contains("show")) {
-                const bsCollapse = new bootstrap.Collapse(navbarCollapse, { toggle: false });
-                bsCollapse.hide();
+            if (navbarCollapse && navbarCollapse.classList.contains("show")) {
+                setMobileMenuState(false);
             }
         });
     });
