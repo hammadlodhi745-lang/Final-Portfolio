@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
     revealTargets.forEach(function (element) {
         revealObserver.observe(element);
     });
-    
+
     const typedTextSpan = document.getElementById("typed-text");
     const phrases = PORTFOLIO_DATA.typingPhrases;
     let phraseIndex = 0;
@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!typedTextSpan) return;
 
         const currentPhrase = phrases[phraseIndex];
-        
+
         if (isDeleting) {
             typedTextSpan.textContent = currentPhrase.substring(0, charIndex - 1);
             charIndex--;
