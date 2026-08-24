@@ -1,87 +1,105 @@
-# 🚘 AURA MOTORS — Luxury & Performance
+# 💻 Muhammad Hammad — Frontend Developer
 
-> **Next-Gen Luxury Mobility Experience**
+> Building Modern, Responsive & Interactive Web Experiences.
 
-AURA MOTORS is a modern, premium automotive showroom website designed to deliver a futuristic and immersive experience for luxury, high-performance, and electric vehicle enthusiasts.
+Welcome to my personal frontend developer portfolio.
+
+This portfolio showcases my skills, projects, services, and experience in building **modern, responsive, and interactive websites** using HTML, CSS, JavaScript, and Bootstrap 5.
+
+🌐 **Live Portfolio:** https://finlportfolio.netlify.app/
+
+---
+
+## 👨‍💻 About Me
+
+I'm **Muhammad Hammad**, a Frontend Developer focused on creating clean, responsive, and visually engaging web experiences.
+
+I enjoy transforming ideas into functional websites with:
+
+* 🎨 Modern UI Design
+* 📱 Responsive Layouts
+* ⚡ Interactive JavaScript
+* 🧩 Bootstrap Components
+* ✨ Smooth & Professional User Experiences
+
+I'm open to **freelance projects, collaborations, and frontend development opportunities**.
+
+---
+
+## 🛠️ Skills & Technologies
+
+### Frontend
+
+* HTML5
+* CSS3
+* JavaScript (ES6+)
+* Bootstrap 5
+
+### UI & Responsive Development
+
+* Responsive Web Design
+* Mobile-First Development
+* Flexbox
+* CSS Grid
+* Modern UI Design
+* Glassmorphism
+* CSS Animations
+
+### Tools
+
+* VS Code
+* Git
+* GitHub
+* Netlify
+* Vercel
+
+---
+
+## 🚀 Featured Projects
+
+### 🚘 AURA MOTORS
+
+A premium automotive website designed to showcase luxury and high-performance vehicles through a modern and responsive interface.
+
+**Technologies:** HTML5 · CSS3 · JavaScript · Bootstrap
 
 🔗 **Live Demo:** https://cars-web-phi.vercel.app/
 
 ---
 
-## ✨ Overview
+### 🎓 Student Dashboard
 
-AURA MOTORS combines **dark stealth aesthetics, luxury automotive visuals, and modern UI design** to create a premium digital showroom experience.
+A responsive student dashboard project focused on clean layouts, structured components, and an intuitive user interface.
 
-The platform showcases a curated fleet of high-performance vehicles with dedicated categories, vehicle information, purchase/test-drive interactions, and bespoke automotive services.
-
----
-
-## 🚀 Features
-
-* 🏎️ **Luxury Automotive Landing Page**
-* 🌑 **Premium Dark & Stealth UI**
-* 🚘 **Curated Vehicle Inventory**
-* ⚡ **Electric Vehicle Category**
-* 🔥 **V8 Turbo Category**
-* ♻️ **Hybrid Performance Category**
-* 💎 **Luxury Vehicle Showcase**
-* 🛒 **Buy Vehicle Interaction**
-* 🏁 **Book a Test Drive**
-* 🛠️ **Bespoke Automotive Services**
-* 📩 **Contact / Concierge Form**
-* 📱 **Responsive Design**
-* ✨ **Modern Interactive UI**
-* 🎨 **Premium Typography & Visual Hierarchy**
+**Technologies:** HTML5 · CSS3 · JavaScript · Bootstrap
 
 ---
 
-## 🏎️ Featured Vehicles
+### ✈️ Karwan e Talha
 
-| Vehicle             | Type               | Performance                  |    Price |
-| ------------------- | ------------------ | ---------------------------- | -------: |
-| **Aura Spectre GT** | Electric Hypercar  | 1020 HP · 0–100 km/h in 2.1s | $185,000 |
-| **Aura Shadow V8**  | V8 Turbo Charged   | 720 HP · 0–100 km/h in 3.2s  | $140,000 |
-| **Aura Neon RS**    | Hybrid Performance | 850 HP · 0–100 km/h in 2.8s  | $165,000 |
+A modern travel website designed to showcase destinations and create an engaging travel discovery experience.
+
+**Technologies:** HTML5 · CSS3 · JavaScript · Bootstrap
 
 ---
 
-## 🛠️ Bespoke Services
+## 💼 Services
 
-### 🛡️ Aura Ceramic Protection
+I can help with:
 
-Self-healing stealth films and nano-ceramic protection designed to maintain a flawless exterior.
-
-### ⚙️ Performance Tuning
-
-Performance-focused upgrades including ECU remapping, exhaust upgrades, and track optimization.
-
-### 💳 VIP Finance
-
-Flexible financial plans and multi-currency purchasing options for premium customers.
+* 🌐 Responsive Website Development
+* 🎯 Landing Page Development
+* 🏢 Business Websites
+* 🎨 Frontend UI Development
+* 🔄 Website Redesign
+* 🐛 Frontend Bug Fixing
+* 📱 Mobile Responsive Optimization
 
 ---
 
-## 🎨 Design Philosophy
+## 📱 Responsive Design
 
-The design follows a **dark luxury + futuristic automotive** aesthetic.
-
-### Visual Direction
-
-* 🖤 Dark stealth background
-* ✨ High-contrast typography
-* 🚘 Large automotive imagery
-* 💎 Premium card layouts
-* ⚡ Futuristic visual language
-* 🎯 Strong call-to-action sections
-* 📐 Clean spacing and hierarchy
-
-The goal is to make the website feel less like a traditional car dealership and more like a **high-end automotive brand experience**.
-
----
-
-## 📱 Responsive Experience
-
-The website is designed to provide a smooth experience across:
+All projects are developed with responsive design principles to provide a smooth experience across:
 
 * 💻 Desktop
 * 💻 Laptop
@@ -90,147 +108,55 @@ The website is designed to provide a smooth experience across:
 
 ---
 
-## 🧩 Website Sections
+## 📈 Development Journey
 
 ```text
-AURA MOTORS
-│
-├── Hero Section
-│   ├── Brand Introduction
-│   ├── Explore Inventory
-│   └── Learn More
-│
-├── Our Philosophy
-│   └── Brand & Performance Overview
-│
-├── Stealth Fleet
-│   ├── All Models
-│   ├── Electric
-│   ├── V8 Turbo
-│   └── Hybrid
-│
-├── Vehicle Cards
-│   ├── Aura Spectre GT
-│   ├── Aura Shadow V8
-│   └── Aura Neon RS
-│
-├── Bespoke Services
-│   ├── Ceramic Protection
-│   ├── Performance Tuning
-│   └── VIP Finance
-│
-├── Contact / Concierge
-│
-└── Test Drive / Purchase Form
+HTML & CSS
+     ↓
+Responsive Web Design
+     ↓
+Flexbox & CSS Grid
+     ↓
+Bootstrap 5
+     ↓
+JavaScript
+     ↓
+Interactive Web Experiences
+     ↓
+Real-World Projects
+     ↓
+Freelancing & Professional Development
 ```
 
 ---
 
-## 💻 Technologies
+## 🎯 Current Focus
 
-> Add/remove technologies below according to the actual stack used in your repository.
+Currently focusing on **Modern Web & Application Development** and continuously improving my frontend development skills through practical projects.
 
-* HTML5
-* CSS3
-* JavaScript
-* Responsive Web Design
-* Modern UI/UX
-* Vercel
+### Learning Focus
+
+`HTML` · `CSS` · `JavaScript` · `Bootstrap` · `Responsive Design` · `Practical Projects`
 
 ---
 
-## ⚙️ Getting Started
+## 🌐 Portfolio
 
-### 1. Clone the repository
+Visit my portfolio to explore my projects, skills, and services:
 
-```bash
-git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.git
-```
-
-### 2. Navigate to the project
-
-```bash
-cd YOUR-REPOSITORY
-```
-
-### 3. Open the project
-
-If it is a static HTML/CSS/JavaScript project, simply open:
-
-```text
-index.html
-```
-
-Or use **Live Server** in VS Code.
+**https://finlportfolio.netlify.app/**
 
 ---
 
-## 🌐 Live Demo
+## 📬 Let's Work Together
 
-Experience the project here:
+Have a website idea or need a modern frontend for your business?
 
-**https://cars-web-phi.vercel.app/**
+Let's build something great together.
 
----
+📧 **Email:** [hammadlodhi745@gmail.com](mailto:hammadlodhi745@gmail.com)
 
-## 📸 Project Highlights
-
-### 🏁 Premium Hero Experience
-
-A cinematic hero section introducing the AURA MOTORS brand.
-
-### 🚘 Vehicle Showcase
-
-Interactive vehicle cards featuring performance specifications and pricing.
-
-### ⚡ Performance Categories
-
-Users can explore vehicles based on:
-
-* Electric
-* V8 Turbo
-* Hybrid
-* All Models
-
-### 🏎️ Test Drive Experience
-
-Dedicated interaction for customers interested in purchasing or booking a drive.
-
----
-
-## 📊 Project Goals
-
-The primary goals of this project were to:
-
-1. Create a premium automotive brand identity.
-2. Practice modern frontend development.
-3. Build a visually impressive portfolio project.
-4. Improve responsive web design skills.
-5. Create reusable and structured UI sections.
-6. Deliver a realistic automotive showroom experience.
-
----
-
-## 👨‍💻 Developer
-
-### Hammad Lodhi
-
-**Frontend Web Developer**
-
-Passionate about building modern, responsive and visually engaging websites using modern web technologies.
-
-### Skills
-
-`HTML` `CSS` `JavaScript` `Bootstrap` `Responsive Design` `UI/UX`
-
----
-
-## 🔗 Connect With Me
-
-* 🌐 **Portfolio:** Add your portfolio link
-* 💼 **LinkedIn:** Add your LinkedIn profile
-* 🐙 **GitHub:** Add your GitHub profile
-* 📧 **Email:** Add your professional email
+📱 **WhatsApp:** +92 314 2476885
 
 ---
 
@@ -242,6 +168,6 @@ If you like this project, consider giving the repository a ⭐ on GitHub.
 
 ## 📄 License
 
-This project was created for **educational and portfolio purposes**.
+This project is created for **portfolio and educational purposes**.
 
-© 2026 AURA MOTORS — All Rights Reserved.
+© 2026 Muhammad Hammad. All Rights Reserved.
