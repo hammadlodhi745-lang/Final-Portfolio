@@ -1160,6 +1160,36 @@ p {
     }
 }
 
+@media (max-width: 1199.98px) {
+    .navbar .container {
+        max-width: 100%;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .nav-link {
+        font-size: 0.72rem;
+        padding: 0.5rem 0.7rem !important;
+        margin: 0 0.08rem;
+        letter-spacing: 0.02em;
+    }
+
+    .navbar-nav {
+        gap: 0.04rem;
+    }
+
+    .navbar .btn-outline-accent {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+        white-space: nowrap;
+    }
+
+    .logo-text {
+        font-size: 0.78rem;
+        letter-spacing: 0.06em;
+    }
+}
+
 @media (max-width: 991px) {
     .navbar-collapse {
         display: none;
